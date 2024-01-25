@@ -51,14 +51,26 @@ public struct Feature1: Reducer {
         return .none
       }
     }
-    .ifLet(\.subFeature1, action: /Action.subFeature1) { SubFeature1() }
-    .ifLet(\.subFeature2, action: /Action.subFeature2) { SubFeature2() }
-    .ifLet(\.subFeature3, action: /Action.subFeature3) { SubFeature3() }
-    .ifLet(\.subFeature4, action: /Action.subFeature4) { SubFeature4() }
-    .ifLet(\.subFeature5, action: /Action.subFeature5) { SubFeature5() }
-    .ifLet(\.subFeature6, action: /Action.subFeature6) { SubFeature6() }
-    .ifLet(\.subFeature7, action: /Action.subFeature7) { SubFeature7() }
-    .ifLet(\.subFeature8, action: /Action.subFeature8) { SubFeature8() }
-    .ifLet(\.subFeature9, action: /Action.subFeature9) { SubFeature9() }
+    .subFeatures1to5()
+    .subFeatures6to9()
+  }
+}
+
+extension Reducer where State == Feature1.State, Action == Feature1.Action {
+  func subFeatures1to5() -> some ReducerOf<Self> {
+    self
+      .ifLet(\.subFeature1, action: /Action.subFeature1) { SubFeature1() }
+      .ifLet(\.subFeature2, action: /Action.subFeature2) { SubFeature2() }
+      .ifLet(\.subFeature3, action: /Action.subFeature3) { SubFeature3() }
+      .ifLet(\.subFeature4, action: /Action.subFeature4) { SubFeature4() }
+      .ifLet(\.subFeature5, action: /Action.subFeature5) { SubFeature5() }
+  }
+
+  func subFeatures6to9() -> some ReducerOf<Self> {
+    self
+      .ifLet(\.subFeature6, action: /Action.subFeature6) { SubFeature6() }
+      .ifLet(\.subFeature7, action: /Action.subFeature7) { SubFeature7() }
+      .ifLet(\.subFeature8, action: /Action.subFeature8) { SubFeature8() }
+      .ifLet(\.subFeature9, action: /Action.subFeature9) { SubFeature9() }
   }
 }
