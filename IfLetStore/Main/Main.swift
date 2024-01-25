@@ -1,6 +1,5 @@
 import ComposableArchitecture
 
-@Reducer
 public struct Main: Reducer {
 
   public init() {}

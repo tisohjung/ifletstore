@@ -25,7 +25,7 @@ public struct MainView: View {
     VStack {
       Text("Hello, Main!")
       IfLetStore(
-        store.scope(state: \.feature1, action: \.feature1),
+        store.scope(state: \.feature1, action: Main.Action.feature1),
         then: { store in
           Feature1View(store: store)
         }

@@ -1,6 +1,5 @@
 import ComposableArchitecture
 
-@Reducer
 public struct Feature1: Reducer {
 
   public init() {}
