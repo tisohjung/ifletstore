@@ -52,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2A970E2B61F50F00259D00 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +146,9 @@
 			dependencies = (
 			);
 			name = IfLetStore;
+			packageProductDependencies = (
+				5A2A970D2B61F50F00259D00 /* ComposableArchitecture */,
+			);
 			productName = IfLetStore;
 			productReference = 5A2A96CF2B61F0E200259D00 /* IfLetStore.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +221,9 @@
 				Base,
 			);
 			mainGroup = 5A2A96C62B61F0E200259D00;
+			packageReferences = (
+				5A2A970C2B61F50F00259D00 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 5A2A96D02B61F0E200259D00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -609,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A2A970C2B61F50F00259D00 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A2A970D2B61F50F00259D00 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A2A970C2B61F50F00259D00 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A2A96C72B61F0E200259D00 /* Project object */;
 }
